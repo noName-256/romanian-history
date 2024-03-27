@@ -1,0 +1,251 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Work sans", sans-serif;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("./WorkSans.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald.ttf");
+  font-style: normal;
+}
+p,
+h {
+  padding: 0;
+  margin: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+  padding: 0px 100px 0px 100px;
+  background-color: #252629;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  gap: 20px;
+}
+.logo-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+img.logo-img {
+  height: 100%;
+}
+.timeline {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 5px 0px 5px 0px;
+  margin-left: -200px;
+  overflow: hidden;
+}
+.timeline .hider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-image: linear-gradient(to right, #252629, #25262900);
+  z-index: 6;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 10000px;
+  height: 10px;
+  background-color: #696a6c;
+  border-radius: 10px;
+}
+.timeline ul {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 0px;
+  margin: 0px;
+  display: flex;
+  gap: 50px;
+  transition: all 0.1s ease-out;
+}
+.timeline li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  list-style: none;
+  font-size: 1.2rem;
+  z-index: 3;
+}
+.timeline li .event-date {
+  margin-top: auto;
+}
+.timeline li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #696a6c;
+  transition: all 0.3s ease-out;
+}
+.timeline li.toggle-point-off::after {
+  opacity: 0;
+}
+.timeline .highlight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 150px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 10;
+}
+.timeline .highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 140px; /* 150px - 10px(half of the width) */
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #fff;
+}
+section.title {
+  margin-top: 140px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+h1.dark-text {
+  color: black;
+}
+h1 .author {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+section:not(.title) h1 {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 500px;
+  line-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.introduction h1 {
+  background-image: url("./bright-blue-bg.jpg");
+}
+.antique-dacia h1 {
+  background-image: url("./decebal.jpg");
+}
+.medieval-times h1 {
+  background-image: url("./medieval-romania.jpg");
+}
+.modern-romania h1 {
+  background-image: url("./cuza.jpeg");
+}
+.communism h1 {
+  background-image: url("./communism.jpg");
+}
+.contemporary h1 {
+  background-image: url("./contemporary-romania.jpg");
+}
+.conclusion h1 {
+  background-image: url("./conclusion.jpg");
+}
+section .section-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  text-align: justify;
+  padding: 50px;
+  width: min(60ch, 80vw);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #252629;
+  color: #a7a8a9;
+  font-family: "Work Sans", sans-serif;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  .logo {
+    height: 100px;
+    width: 100vw;
+    justify-content: center;
+    display: none;
+  }
+  .timeline {
+    height: 100px;
+    margin: 0;
+    padding: 0px 50px 0px 50px;
+  }
+  .timeline .timeline-events {
+    padding: 0;
+  }
+  footer {
+    line-height: 25px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+.future {
+  margin-left: calc(20vw + 50px);
+  margin-right: calc(20vw + 50px);
+}
