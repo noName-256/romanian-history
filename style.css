@@ -1,6 +1,8 @@
 body {
   padding: 0px;
   margin: 0px;
+  width: 100vw;
+  overflow-x: hidden;
   font-family: "Work sans", sans-serif;
 }
 @font-face {
@@ -21,8 +23,11 @@ h {
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
   flex-direction: row;
+  gap: 90px;
   height: 140px;
   padding: 0px 100px 0px 100px;
   background-color: #252629;
@@ -34,6 +39,7 @@ header {
   align-items: center;
   padding: 20px 0px 20px 0px;
   gap: 20px;
+  width: 280px;
 }
 .logo-text {
   font-family: "Work Sans", sans-serif;
@@ -48,7 +54,6 @@ img.logo-img {
   box-sizing: border-box;
   height: 100%;
   padding: 5px 0px 5px 0px;
-  margin-left: -200px;
   overflow: hidden;
 }
 .timeline .hider {
@@ -204,7 +209,7 @@ p {
 footer {
   text-align: center;
   padding: 25px;
-  height: 50px;
+  min-height: 50px;
   line-height: 50px;
   background-color: #252629;
   color: #a7a8a9;
