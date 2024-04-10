@@ -1,12 +1,12 @@
-function toggleAllEventRadios(passedSection) {
-  const allTimelineEvents = document.querySelectorAll(".timeline-events li");
-  allTimelineEvents.forEach((timelineEvent) => {
+function updateRadios(section) {
+  const timelineEvents = document.querySelectorAll(".timeline-events li");
+  timelineEvents.forEach((timelineEvent) => {
     timelineEvent.classList.remove("toggle-point-off");
   });
-  allTimelineEvents.forEach((timelineEventAfter) => {
-    if (passedSection >= 0)
+  timelineEvent.forEach((timelineEventAfter) => {
+    if (section >= 0)
       timelineEventAfter.classList.add("toggle-point-off");
-    passedSection--;
+    section--;
   });
 }
 function adjustTimeline(sectionsScrollPositions) {
@@ -38,7 +38,7 @@ function adjustTimeline(sectionsScrollPositions) {
       350;
   const translateText = `translate(-${timelineScroll}px, 0)`;
   timelineContentElement.style.transform = translateText;
-  toggleAllEventRadios(currentSection);
+  updateRadios(currentSection);
 }
 
 window.addEventListener("load", () => {
