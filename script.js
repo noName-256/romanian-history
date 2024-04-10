@@ -1,4 +1,4 @@
-function toggleEventRadios(passedSection) {
+function toggleAllEventRadios(passedSection) {
   const allTimelineEvents = document.querySelectorAll(".timeline-events li");
   allTimelineEvents.forEach((timelineEvent) => {
     timelineEvent.classList.remove("toggle-point-off");
@@ -38,7 +38,7 @@ function adjustTimeline(sectionsScrollPositions) {
       350;
   const translateText = `translate(-${timelineScroll}px, 0)`;
   timelineContentElement.style.transform = translateText;
-  toggleEventRadios(currentSection);
+  toggleAllEventRadios(currentSection);
 }
 
 window.addEventListener("load", () => {
